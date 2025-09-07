@@ -6,12 +6,6 @@
 - Federico Jesus Galan 38219470
 
 
-## Características principales
-
-- Conversor de temperatura🔥
-- Inicio de sesion con java sin base de datos ✨
-- Distintas Versiones Segun Alumno 😎
-
 
 ## Tecnologías utilizadas
 
