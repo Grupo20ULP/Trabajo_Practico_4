@@ -1,0 +1,53 @@
+# ==========================
+# Archivos compilados de Java
+# ==========================
+*.class
+
+# ==========================
+# Carpetas de salida / build
+# ==========================
+build/
+dist/
+out/
+target/
+
+# ==========================
+# NetBeans project
+# ==========================
+nbproject/private/       # Configuración privada, no compartir
+nbproject/project.properties
+nbproject/build-impl.xml
+
+# ==========================
+# Librerías externas
+# ==========================
+# Permitimos que se compartan los .jar necesarios
+# !libs/
+
+# ==========================
+# Archivos temporales y logs
+# ==========================
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+# ==========================
+# Configuración de otros IDEs
+# ==========================
+*.iml
+.idea/
+.vscode/
+
+# ==========================
+# Archivos del sistema operativo
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Archivos relacionados con distintas versiones de JDK
+# ==========================
+# No ignoramos nada de código fuente, solo compilados y binarios
+# Así cualquier JDK puede compilar sin conflicto
