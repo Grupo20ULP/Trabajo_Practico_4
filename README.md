@@ -3,7 +3,7 @@
 # Grupo 20 🚀
 
 ## Integrantes:
-- Federico Jesus Galan 38219470
+- Federico Jesus Galan 
 
 
 
