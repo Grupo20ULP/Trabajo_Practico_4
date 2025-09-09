@@ -190,6 +190,12 @@ public class AgregarMateriaView extends javax.swing.JInternalFrame {
             return;
         }
         
+        for (Materia materiaExistente : escuelaPrincipal.getListaMaterias()) {
+            if (materiaExistente.getIdMateria() == idMateria) {
+                JOptionPane.showMessageDialog(this, "Ya existe una materia con este código", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+        }
         
         Materia nuevaMateria = new Materia(idMateria, nombre, anio);
         escuelaPrincipal.agregarMateria(nuevaMateria);

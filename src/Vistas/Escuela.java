@@ -30,6 +30,7 @@ public class Escuela extends javax.swing.JFrame {
     public HashSet<Materia> getListaMaterias() {
     return listaMaterias;
     }
+    
     public void agregarMateria(Materia materia){
         if (listaMaterias.add(materia)){
             JOptionPane.showMessageDialog(null, "Materia Agregada: "+materia,
