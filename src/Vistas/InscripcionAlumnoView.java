@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package Vistas;
 
 import clases.Alumno;
@@ -11,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author TuMachGalan
+ * @author TuMachGalan - Carreño Lucas
  */
 public class InscripcionAlumnoView extends javax.swing.JInternalFrame {
 private HashSet<Alumno> lAlumnos;
@@ -185,7 +181,7 @@ private HashSet<Materia> lMaterias;
 
     private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
         // TODO add your handling code here:
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_jBtnSalirActionPerformed
     private void cargaMaterias(){
         jcbMateria.removeAllItems();

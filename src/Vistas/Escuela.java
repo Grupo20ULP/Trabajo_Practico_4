@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vistas;
 
 import clases.Alumno;
@@ -12,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author TuMachGalan
+ * @author TuMachGalan - Carreño Lucas
  */
 public class Escuela extends javax.swing.JFrame {
     private HashSet<Alumno> listaAlumnos= new HashSet<>();
@@ -62,20 +58,23 @@ public class Escuela extends javax.swing.JFrame {
         jMenuInscripcionAdd = new javax.swing.JMenuItem();
         jMenuSalir = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Sistema Gestion Alumnos");
+        setPreferredSize(new java.awt.Dimension(700, 600));
+        setResizable(false);
 
         escritorio.setBackground(new java.awt.Color(30, 35, 40));
+        escritorio.setPreferredSize(new java.awt.Dimension(700, 600));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 739, Short.MAX_VALUE)
+            .addGap(0, 391, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 522, Short.MAX_VALUE)
+            .addGap(0, 268, Short.MAX_VALUE)
         );
 
         jMenuAlumno.setText("Alumno");
@@ -121,6 +120,11 @@ public class Escuela extends javax.swing.JFrame {
         jMenuBar1.add(jMenuRegistro);
 
         jMenuSalir.setText("Salir");
+        jMenuSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuSalirMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenuSalir);
 
         setJMenuBar(jMenuBar1);
@@ -129,11 +133,11 @@ public class Escuela extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
         );
 
         pack();
@@ -173,6 +177,11 @@ public class Escuela extends javax.swing.JFrame {
         escritorio.add(vi);
         escritorio.moveToFront(vi);
     }//GEN-LAST:event_jMenuInscripcionAddActionPerformed
+
+    private void jMenuSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuSalirMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuSalirMouseClicked
 
     /**
      * @param args the command line arguments
