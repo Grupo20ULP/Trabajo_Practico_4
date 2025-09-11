@@ -121,6 +121,11 @@ public class Escuela extends javax.swing.JFrame {
         jMenuBar1.add(jMenuRegistro);
 
         jMenuSalir.setText("Salir");
+        jMenuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuSalirActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenuSalir);
 
         setJMenuBar(jMenuBar1);
@@ -173,6 +178,12 @@ public class Escuela extends javax.swing.JFrame {
         escritorio.add(vi);
         escritorio.moveToFront(vi);
     }//GEN-LAST:event_jMenuInscripcionAddActionPerformed
+
+    private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
+        // TODO add your handling code here:
+        
+        this.dispose();
+    }//GEN-LAST:event_jMenuSalirActionPerformed
 
     /**
      * @param args the command line arguments
