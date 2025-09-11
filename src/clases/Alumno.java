@@ -5,19 +5,23 @@ import javax.swing.JOptionPane;
 
 public class Alumno {
 
+    // Mensajes centralizados (mismo texto que antes)
+    private static final String MSG_OK = "Alumno Inscripto Correctamente";
+    private static final String MSG_ERR_TITULO = "ERROR AL INGRESAR";
+    private static final String MSG_ERR_CUERPO = "El Alumno ya esta inscripto a esa Materia";
+
     private int legajo;
-
     private String apellido;
-
     private String nombre;
-    
+
+    // Inicialización en el campo; quitamos la duplicada del constructor
     private HashSet<Materia> materias = new HashSet<>();
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.materias= new HashSet<>();
+        // (Antes se hacía this.materias = new HashSet<>(); redundante con la de arriba)
     }
 
     public HashSet<Materia> getMaterias() {
@@ -54,18 +58,26 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return  apellido+ ", " + nombre ;
+        // Mantenemos exactamente "apellido, nombre"
+        return apellido + ", " + nombre;
     }
-    public int cantidadMaterias(){
+
+    public int cantidadMaterias() {
         return materias.size();
     }
-    public void agregarMateria(Materia materia){
-         if(materias.add(materia)){
-             JOptionPane.showMessageDialog(null, "Alumno Inscripto Correctamente");
-         }else{
-             JOptionPane.showMessageDialog(null, "El Alumno ya esta inscripto a esa Materia",
-                "ERROR AL INGRESAR", JOptionPane.ERROR_MESSAGE);
-             
-         };
+
+    public void agregarMateria(Materia materia) {
+        // Misma lógica, escrito de forma clara
+        boolean agregado = materias.add(materia);
+        if (agregado) {
+            JOptionPane.showMessageDialog(null, MSG_OK);
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                MSG_ERR_CUERPO,
+                MSG_ERR_TITULO,
+                JOptionPane.ERROR_MESSAGE
+            );
+        }
     }
 }
